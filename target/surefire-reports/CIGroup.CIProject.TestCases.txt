@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: CIGroup.CIProject.TestCases
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.913 s - in CIGroup.CIProject.TestCases
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.517 s <<< FAILURE! - in CIGroup.CIProject.TestCases
+test1(CIGroup.CIProject.TestCases)  Time elapsed: 2.13 s  <<< FAILURE!
+java.lang.AssertionError: Test Failed, See Error in Report andjava.lang.AssertionError: expected [111Grafana - Home] but found [Grafana - Home]
+	at CIGroup.CIProject.TestCases.test1(TestCases.java:72)
+
