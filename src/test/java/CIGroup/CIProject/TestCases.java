@@ -58,7 +58,7 @@ public class TestCases
 			driver.findElement(By.cssSelector("a[class='btn btn-link']")).click();
 			Thread.sleep(500);
 			test.log(LogStatus.PASS, "Skip clicked successfully");
-			assertEquals(driver.getTitle(), "Grafana - Home");
+			assertEquals(driver.getTitle(), "1Grafana - Home");
 			test.log(LogStatus.PASS, "Assert successfully");
 		}
 		catch (Exception exp)
