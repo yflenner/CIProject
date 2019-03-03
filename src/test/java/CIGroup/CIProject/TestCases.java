@@ -29,13 +29,14 @@ public class TestCases
 	}
 	
 	@Test
-	public void test1()
+	public void test1() throws InterruptedException
 	{
 		driver.findElement(By.name("username")).sendKeys("admin");
 		driver.findElement(By.name("password")).sendKeys("admin");
 		driver.findElement(By.cssSelector("button[type='submit']")).click();
 		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.cssSelector("a[class='btn btn-link']"))));
 		driver.findElement(By.cssSelector("a[class='btn btn-link']")).click();
+		Thread.sleep(500);
 		assertEquals(driver.getTitle(), "Grafana - Home");
 	}
 	
