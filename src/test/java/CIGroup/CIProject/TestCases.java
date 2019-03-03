@@ -58,7 +58,7 @@ public class TestCases
 			driver.findElement(By.cssSelector("a[class='btn btn-link']")).click();
 			Thread.sleep(500);
 			test.log(LogStatus.PASS, "Skip clicked successfully");
-			assertEquals(driver.getTitle(), "Grafana - Home");
+			assertEquals(driver.getTitle(), "1Grafana - Home");
 			test.log(LogStatus.PASS, "Assert successfully");
 		}
 		catch (Exception exp)
@@ -89,7 +89,7 @@ public class TestCases
 	
 	public String takeSS() throws IOException
 	{
-		String path = "./Reports/screenshot.png";
+		String path = "./htmlreports/screenshot.png";
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);			
 		FileUtils.copyFile(scrFile, new File(path));
 		return path;
