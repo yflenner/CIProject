@@ -39,7 +39,7 @@ public class TestCases
 		driver.get("http://localhost:3030/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		wait = new WebDriverWait(driver, 10);
-		extent = new ExtentReports("./Reports/ExecutionReport.html");
+		extent = new ExtentReports("./htmlreports/index.html");
 	}
 	
 	@Test
