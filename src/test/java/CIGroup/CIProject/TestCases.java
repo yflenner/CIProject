@@ -30,12 +30,12 @@ public class TestCases
 	WebDriverWait wait;
 	ExtentReports extent;
 	ExtentTest test; 
-	String brwoser;
+	String browser;
 	
 	@BeforeClass
 	public void startSession()
 	{
-		brwoser = System.getenv("browserType");
+		browser = System.getenv("browserType");
 		System.out.println("browser type: "+ browser);
 		if (browser.equalsIgnoreCase("chrome"))
 		{
