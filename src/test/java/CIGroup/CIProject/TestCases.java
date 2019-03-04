@@ -30,11 +30,21 @@ public class TestCases
 	WebDriverWait wait;
 	ExtentReports extent;
 	ExtentTest test; 
+	String brwoser;
 	
 	@BeforeClass
 	public void startSession()
 	{
-		driver = new ChromeDriver();
+		brwoser = System.getenv("browserType");
+		System.out.println("browser type: "+ browser);
+		if (browser.equalsIgnoreCase("chrome"))
+		{
+			driver = new ChromeDriver();
+		}
+		else if(browser.equalsIgnoreCase("firefox"))
+		{
+			
+		}
 		driver.manage().window().maximize();
 		driver.get("http://localhost:3030/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
